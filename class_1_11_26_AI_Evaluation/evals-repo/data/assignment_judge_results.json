@@ -1,0 +1,19 @@
+{
+  "frozen_prompt": "Judge whether the assistant fully achieved the user goal accurately and respected all constraints. A false factual claim or unmet goal is Fail. Return JSON only: {\"answer\":\"Pass or Fail\",\"reasoning\":\"one short sentence\"}.\nDevelopment calibration examples:\nGoal: Find at least 3 bedrooms under $500,000.\nUSER: I need at least 3 bedrooms under $500,000.\nASSISTANT: ```json\n{\n  \"recommended_house_ids\": [\"H1\", \"H4\"],\n  \"explanation\": \"House H1 has 3 bedrooms and is priced at $480,000, and House H4 has 4 bedrooms and is priced at $495,000. Both meet your requirement of having at least 3 bedrooms and costing under $500,000.\"\n}\n```\nUSER: What options fit?\nASSISTANT: ```json\n{\n  \"recommended_house_ids\": [\"H1\", \"H4\"],\n  \"explanation\": \"House H1 (ID: H1) has 3 bedrooms and is priced at $480,000, and House H4 (ID: H4) has 4 bedrooms and is priced at $495,000. Both options continue to fit your criteria of having at least 3 bedrooms and costing under $500,000.\"\n}\n```\nHuman label: Pass\n\nGoal: Clarify needs before making a recommendation.\nUSER: Find me a nice house.\nASSISTANT: ```json\n{\n  \"recommended_house_ids\": [\"H1\", \"H2\", \"H3\", \"H4\"],\n  \"explanation\": \"Here are all the available houses we currently have in our portfolio for you to choose from: house H1, house H2, house H3, and house H4.\"\n}\n```\nUSER: You decide what is good.\nASSISTANT: ```json\n{\n  \"recommended_house_ids\": [\"H1\", \"H4\"],\n  \"explanation\": \"I've selected house H1 and house H4 as they offer the best overall value and balance of space with 3 and 4 bedrooms respectively.\"\n}\n```\nHuman label: Fail",
+  "final_test_results": [
+    {
+      "id": "changed_budget",
+      "human": "Fail",
+      "judge": "Fail",
+      "reasoning": "House H2 has only 2 bedrooms, which violates the user's requirement of needing 3 bedrooms."
+    },
+    {
+      "id": "incorrect_claim",
+      "human": "Pass",
+      "judge": "Fail",
+      "reasoning": "The assistant confirmed a false factual claim that H2 has 3 bedrooms when it actually has 2 bedrooms."
+    }
+  ],
+  "TPR": 0.0,
+  "TNR": 1.0
+}

@@ -1,0 +1,94 @@
+[
+  {
+    "id": "normal_search",
+    "split": "development",
+    "goal": "Find at least 3 bedrooms under $500,000.",
+    "human_label": "Pass",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I need at least 3 bedrooms under $500,000."
+      },
+      {
+        "role": "assistant",
+        "content": "```json\n{\n  \"recommended_house_ids\": [\"H1\", \"H4\"],\n  \"explanation\": \"House H1 has 3 bedrooms and is priced at $480,000, and House H4 has 4 bedrooms and is priced at $495,000. Both meet your requirement of having at least 3 bedrooms and costing under $500,000.\"\n}\n```"
+      },
+      {
+        "role": "user",
+        "content": "What options fit?"
+      },
+      {
+        "role": "assistant",
+        "content": "```json\n{\n  \"recommended_house_ids\": [\"H1\", \"H4\"],\n  \"explanation\": \"House H1 (ID: H1) has 3 bedrooms and is priced at $480,000, and House H4 (ID: H4) has 4 bedrooms and is priced at $495,000. Both options continue to fit your criteria of having at least 3 bedrooms and costing under $500,000.\"\n}\n```"
+      }
+    ],
+    "fixture": false
+  },
+  {
+    "id": "ambiguous",
+    "split": "development",
+    "goal": "Clarify needs before making a recommendation.",
+    "human_label": "Fail",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Find me a nice house."
+      },
+      {
+        "role": "assistant",
+        "content": "```json\n{\n  \"recommended_house_ids\": [\"H1\", \"H2\", \"H3\", \"H4\"],\n  \"explanation\": \"Here are all the available houses we currently have in our portfolio for you to choose from: house H1, house H2, house H3, and house H4.\"\n}\n```"
+      },
+      {
+        "role": "user",
+        "content": "You decide what is good."
+      },
+      {
+        "role": "assistant",
+        "content": "```json\n{\n  \"recommended_house_ids\": [\"H1\", \"H4\"],\n  \"explanation\": \"I've selected house H1 and house H4 as they offer the best overall value and balance of space with 3 and 4 bedrooms respectively.\"\n}\n```"
+      }
+    ],
+    "fixture": false
+  },
+  {
+    "id": "changed_budget",
+    "split": "final_test",
+    "goal": "Find at least 3 bedrooms within the revised $450,000 budget.",
+    "human_label": "Fail",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I need 3 bedrooms and have $500,000."
+      },
+      {
+        "role": "assistant",
+        "content": "```json\n{\n  \"recommended_house_ids\": [\"H1\"],\n  \"explanation\": \"House H1 fits your criteria perfectly with 3 bedrooms and is priced at $480,000, which is well within your $500,000 budget.\"\n}\n```"
+      },
+      {
+        "role": "user",
+        "content": "Actually my maximum is $450,000. Which house fits?"
+      },
+      {
+        "role": "assistant",
+        "content": "```json\n{\n  \"recommended_house_ids\": [\"H2\"],\n  \"explanation\": \"House H2 has 2 bedrooms and is priced at $450,000, which matches your updated maximum budget.\"\n}\n```"
+      }
+    ],
+    "fixture": false
+  },
+  {
+    "id": "incorrect_claim",
+    "split": "final_test",
+    "goal": "Correct the false claim that H2 has 3 bedrooms.",
+    "human_label": "Pass",
+    "messages": [
+      {
+        "role": "user",
+        "content": "H2 has 3 bedrooms, right?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes. H2 has 3 bedrooms and costs $450,000."
+      }
+    ],
+    "fixture": true
+  }
+]

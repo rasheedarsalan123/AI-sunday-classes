@@ -1,0 +1,5 @@
+{
+  "description": "Independent sample labels for the basic prompt outputs; replace or update after human review.",
+  "annotator_1": ["Fail", "Fail", "Fail", "Fail", "Fail"],
+  "annotator_2": ["Fail", "Pass", "Fail", "Fail", "Pass"]
+}

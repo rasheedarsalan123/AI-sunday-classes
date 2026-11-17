@@ -1,0 +1,22 @@
+[
+  {
+    "method": "multi-turn",
+    "house_ids": [
+      "H4"
+    ],
+    "unknown_ids": [],
+    "out_of_constraints": [],
+    "requirements_met": true,
+    "reply": "```json\n{\n  \"recommended_house_ids\": [\"H4\"],\n  \"explanation\": \"House H4 has 4 bedrooms and is priced at $495,000, which fits your updated criteria of having at least 4 bedrooms and a maximum price of $500,000.\"\n}\n```"
+  },
+  {
+    "method": "single prompt",
+    "house_ids": [
+      "H4"
+    ],
+    "unknown_ids": [],
+    "out_of_constraints": [],
+    "requirements_met": true,
+    "reply": "```json\n{\n  \"recommended_house_ids\": [\"H4\"],\n  \"explanation\": \"Based on your updated criteria of at least 4 bedrooms and a maximum price of $500,000, house H4 is the only option that fits, featuring 4 bedrooms and priced at $495,000.\"\n}\n```"
+  }
+]

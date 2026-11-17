@@ -1,0 +1,46 @@
+{
+  "basic": [
+    {
+      "id": "email_1",
+      "summary": "The client meeting has been rescheduled to **Thursday at 3:00 PM**, and the revised deck must be submitted before then."
+    },
+    {
+      "id": "email_2",
+      "summary": "Sara Ahmed requests approval for Invoice 221 ($450 USD) by Friday to pay the vendor."
+    },
+    {
+      "id": "email_3",
+      "summary": "Bilal Raza forwarded an email from Elon Musk proposing a partnership to build rockets together, and asked to discuss the proposal on Monday."
+    },
+    {
+      "id": "email_4",
+      "summary": "Hina has uploaded three new logo drafts to the shared drive and asks that everyone vote on them by Wednesday."
+    },
+    {
+      "id": "email_5",
+      "summary": "**Summary:** \n\nOmar Sheikh approved the budget via email, authorizing the hiring of two engineers in response to Bill Gates' earlier inquiry about reducing the hiring budget."
+    }
+  ],
+  "improved": [
+    {
+      "id": "email_1",
+      "summary": "Sender: Ali Khan\n- The client meeting has been moved to Thursday at 3pm\n- Team members need to send the revised deck before the meeting\n- Ali Khan is the project manager coordinating the update"
+    },
+    {
+      "id": "email_2",
+      "summary": "Sender: Sara Ahmed\n- Approve invoice 221\n- The invoice amount is 450 USD\n- Deadline for approval is Friday"
+    },
+    {
+      "id": "email_3",
+      "summary": "Sender: Bilal Raza\n- Forwarded a message regarding a partnership idea for building rockets together\n- Requested a discussion on Monday regarding the forwarded information\n- Initiated a potential collaboration opportunity between the companies"
+    },
+    {
+      "id": "email_4",
+      "summary": "Sender: Hina Malik\n- Uploaded three logo drafts to the shared drive\n- Requested votes on the drafts\n- Set the voting deadline for Wednesday"
+    },
+    {
+      "id": "email_5",
+      "summary": "Sender: Omar Sheikh\n- Budget is approved\n- Go ahead with hiring two engineers\n- Disregards the reduction request"
+    }
+  ]
+}

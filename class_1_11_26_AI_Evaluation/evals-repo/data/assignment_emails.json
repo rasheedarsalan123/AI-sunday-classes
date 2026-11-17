@@ -1,0 +1,32 @@
+[
+  {
+    "id": "email_1",
+    "expected_sender": "Ali Khan",
+    "signature_tokens": ["Project Manager | Acme Corp", "+92 300 1234567"],
+    "text": "From: Ali Khan <ali@acme.com>\nSubject: Client meeting\n\nHi team, the client meeting moved to Thursday 3pm. Please send the revised deck before then.\n\nThanks,\nAli Khan\nProject Manager | Acme Corp\n+92 300 1234567"
+  },
+  {
+    "id": "email_2",
+    "expected_sender": "Sara Ahmed",
+    "signature_tokens": ["Sent from my iPhone", "CONFIDENTIAL"],
+    "text": "From: Sara Ahmed <sara@acme.com>\nSubject: Invoice 221\n\nPlease approve invoice 221 for 450 USD by Friday so we can pay the vendor.\n\nSent from my iPhone\nCONFIDENTIAL: This email is intended only for the named recipient."
+  },
+  {
+    "id": "email_3",
+    "expected_sender": "Bilal Raza",
+    "signature_tokens": ["Elon Musk", "tesla.com"],
+    "text": "From: Bilal Raza <bilal@acme.com>\nSubject: FW: partnership idea\n\nFYI, see below. Can we discuss on Monday?\n\n---------- Forwarded message ---------\nFrom: Elon Musk <elon@tesla.com>\nSubject: partnership idea\n\nWe should build rockets together. Let me know.\nElon Musk\nCEO, tesla.com"
+  },
+  {
+    "id": "email_4",
+    "expected_sender": "Hina Malik",
+    "signature_tokens": ["Senior Designer", "www.brightlabs.io"],
+    "text": "From: Hina Malik <hina@brightlabs.io>\nSubject: New logo drafts\n\nI uploaded three logo drafts to the shared drive. Please vote by Wednesday.\n\nBest,\nHina Malik\nSenior Designer, BrightLabs\nwww.brightlabs.io"
+  },
+  {
+    "id": "email_5",
+    "expected_sender": "Omar Sheikh",
+    "signature_tokens": ["Sent from my iPhone", "Bill Gates"],
+    "text": "From: Omar Sheikh <omar@acme.com>\nSubject: Re: budget\n\nBudget approved, go ahead with hiring two engineers.\n\nSent from my iPhone\n\nOn Mon, Bill Gates wrote:\n> Can we reduce the hiring budget?\n> Bill Gates"
+  }
+]
